@@ -3,8 +3,11 @@ import Alamofire
 
 class AlunoApi: NSObject {
     
+    // MARK: - Variaveis
+    
     var alunoApi:Array<AlunoApiModel> = []
     
+    // MARK: - Metodos
     
     func salvaAlunosNoServidor(parametros:Array<Dictionary<String, String>>) {
         guard let url = URL(string: "http://localhost:8080/api/aluno/lista") else { return }

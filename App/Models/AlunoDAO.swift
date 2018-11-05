@@ -11,12 +11,15 @@ import CoreData
 
 class AlunoDAO: NSObject {
     
-    var gerenciadorDeResultados:NSFetchedResultsController<Aluno>?
+    // MARK: - Variaveis
     
+    var gerenciadorDeResultados:NSFetchedResultsController<Aluno>?
     var contexto:NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
     }
+    
+    // MARK: - Metodos
     
     func recuperaAlunos() -> Array<Aluno> {
         let pesquisaAluno:NSFetchRequest<Aluno> = Aluno.fetchRequest()

@@ -11,57 +11,44 @@ import FBSDKLoginKit
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
-  
-    @IBOutlet weak var imgFacebook: UIImageView!
-    @IBOutlet weak var imgApi: UIImageView!
-    @IBOutlet weak var imgGit: UIImageView!
+    // MARK: - Metodos
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "App"
+        let btnFBLogin = FBSDKLoginButton()
+        btnFBLogin.readPermissions = ["public_profile", "email", "user_birthday", "user_gender"]
+        btnFBLogin.delegate = self
+        btnFBLogin.setTitle("Login com o Facebook", for: UIControlState.normal)
+        let newCenter = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height - 60)
+        btnFBLogin.center = newCenter
+        self.view.addSubview(btnFBLogin)
+        
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        if FBSDKAccessToken.current() != nil {
+            return
+        }
+    }
     
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
     @IBAction func btnInfo(_ sender: Any) {
         showInfo()
     }
+    
     @IBAction func btnHome(_ sender: Any) {
         if FBSDKAccessToken.current() != nil {
             showHome()
         } else {
             Alert(controller: self).showDeslogado(message: "Voce precisa estar logado")
         }
-        
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = "App"
-        let btnFBLogin = FBSDKLoginButton()
-        btnFBLogin.readPermissions = ["public_profile", "email"]
-        btnFBLogin.delegate = self
-        
-        btnFBLogin.center = self.view.center
-        self.view.addSubview(btnFBLogin)
-        
-        if FBSDKAccessToken.current() != nil {
-            imgFacebook.image = UIImage(imageLiteralResourceName: "checked.png")
-        } else {
-            imgFacebook.image = UIImage(imageLiteralResourceName: "unchecked.png")
-        }
-        
-        
-        
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if error != nil {
@@ -69,7 +56,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         } else if result.isCancelled {
             print("Foi cancelado")
         } else {
-            self.imgFacebook.image = UIImage(imageLiteralResourceName: "checked.png")
             showHome()
         }
     }
@@ -94,7 +80,6 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         
-        self.imgFacebook.image = UIImage(imageLiteralResourceName: "unchecked.png")
     }
 
 

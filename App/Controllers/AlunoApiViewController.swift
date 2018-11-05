@@ -10,20 +10,21 @@ import UIKit
 
 class AlunoApiViewController: UIViewController {
     
+    // MARK: - IBOutlet
+    
     @IBOutlet weak var txtFieldNome: UITextField!
     @IBOutlet weak var txtFieldEndereco: UITextField!
     @IBOutlet weak var txtFieldTelefone: UITextField!
     @IBOutlet weak var txtFieldSite: UITextField!
+    
+    // MARK: - Metodos
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func montaDicionarioDeParametros() -> Dictionary<String, String> {
@@ -46,6 +47,7 @@ class AlunoApiViewController: UIViewController {
     @IBAction func btnSalvar(_ sender: UIButton) {
         let json = montaDicionarioDeParametros()
         AlunoApi().salvaAlunosNoServidor(parametros: [json])
+        
         navigationController?.popViewController(animated: true)
     }
     

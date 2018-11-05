@@ -11,11 +11,17 @@ import CoreData
 
 class DaoTableViewController: UITableViewController, NSFetchedResultsControllerDelegate  {
     
+    // MARK: - Variaveis
+    
+    var mensagem = Mensagem()
+    
     var gerenciadorDeResultados:NSFetchedResultsController<Aluno>?
     var contexto:NSManagedObjectContext {
         let appDelegate =  UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
     }
+    
+    // MARK: - Metodos
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +29,7 @@ class DaoTableViewController: UITableViewController, NSFetchedResultsControllerD
         tableView.register(UINib.init(nibName: "DaoTableViewCell", bundle: nil), forCellReuseIdentifier: "CellDao")
         self.addBarItem()
         self.recuperaAlunos()
-        self.title = "Dao Aluno"
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.title = "Alunos"
     }
     
     func recuperaAlunos() -> Void {
@@ -58,6 +58,53 @@ class DaoTableViewController: UITableViewController, NSFetchedResultsControllerD
         navigationController?.pushViewController(newAluno, animated: true)
     }
     
+    @objc func abrirActionSheet(_ longPress:UILongPressGestureRecognizer) {
+        if longPress.state == .began {
+            guard let alunoSelecionado = gerenciadorDeResultados?.fetchedObjects?[(longPress.view?.tag)!] else { return }
+            let menu = MenuOpcoesAlunos().configuraMenuDeOpcoesDoAluno(completion: { (opcao) in
+                switch opcao {
+                case .sms:
+                    if let componenteMensagem = self.mensagem.configuraSMS(alunoSelecionado, self) {
+                        componenteMensagem.messageComposeDelegate = self.mensagem
+                        self.present(componenteMensagem, animated: true, completion: nil)
+                    }
+                    break
+                case .ligacao:
+                    print("Ligar")
+                    break
+                case .waze:
+                    if UIApplication.shared.canOpenURL(URL(string: "waze://")!) {
+                        guard let enderecoDoAluno = alunoSelecionado.endereco else { return }
+                        Localizacao().converteEnderecoEmCoordenadas(endereco: enderecoDoAluno, local: { (localizacaoEncontrada) in
+                            let latitude = String(describing: localizacaoEncontrada.location!.coordinate.latitude)
+                            let longitude = String(describing: localizacaoEncontrada.location!.coordinate.longitude)
+                            let url:String = "waze://?ll=\(latitude),\(longitude)&navigate=yes"
+                            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+                        })
+                    } else {
+                        let alert = UIAlertController(title: "Desculpa", message: "Voce nao tem Waze", preferredStyle: UIAlertControllerStyle.alert)
+                        
+                        let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil )
+                        alert.addAction(ok)
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    
+                    break
+                case .mapa:
+                    let mapa = MapaViewController()
+                    mapa.aluno = alunoSelecionado
+                    self.navigationController?.pushViewController(mapa, animated: true)
+                    break
+                case .abrirPaginaWeb:
+                    print("WEB")
+                    break
+                }
+            })
+            self.present(menu, animated: true, completion: nil)
+        }
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -74,23 +121,16 @@ class DaoTableViewController: UITableViewController, NSFetchedResultsControllerD
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celula = tableView.dequeueReusableCell(withIdentifier: "CellDao", for: indexPath) as! DaoTableViewCell
+        celula.tag = indexPath.row
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(abrirActionSheet(_:)))
         
         guard let aluno = gerenciadorDeResultados?.fetchedObjects![indexPath.row] else { return celula }
         
         celula.configuraCelula(aluno)
+        celula.addGestureRecognizer(longPress)
         
         return celula
     }
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -106,14 +146,6 @@ class DaoTableViewController: UITableViewController, NSFetchedResultsControllerD
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
- 
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let alunoSelecionado = gerenciadorDeResultados?.fetchedObjects![indexPath.row] else { return }
@@ -121,6 +153,10 @@ class DaoTableViewController: UITableViewController, NSFetchedResultsControllerD
         newAluno.aluno = alunoSelecionado
         navigationController?.pushViewController(newAluno, animated: true)
         
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
     }
 
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {

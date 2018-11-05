@@ -7,29 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2176D921727188005258B7 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2176D821727188005258B7 /* success.png */; };
+		8C2176DD21727246005258B7 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2176DC21727246005258B7 /* unchecked.png */; };
+		8C25B3722177F2C100B0FBFA /* Localizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C25B3712177F2C100B0FBFA /* Localizacao.swift */; };
 		8C274A0821617864009169CC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C274A0721617864009169CC /* Alert.swift */; };
 		8C2BA0BC2161416000F1BE1C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BA0BA2161416000F1BE1C /* InfoViewController.swift */; };
 		8C2BA0BF2161417F00F1BE1C /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2BA0BE2161417F00F1BE1C /* InfoViewController.xib */; };
 		8C2BA0C2216144CF00F1BE1C /* egsys.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2BA0C1216144CF00F1BE1C /* egsys.png */; };
-		8C2BA0C4216146AD00F1BE1C /* HomeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BA0C3216146AD00F1BE1C /* HomeDelegate.swift */; };
 		8C2BA0C621614B8D00F1BE1C /* startup.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2BA0C521614B8D00F1BE1C /* startup.png */; };
 		8C2BA0C821614F7600F1BE1C /* archive.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2BA0C721614F7600F1BE1C /* archive.png */; };
 		8C2BA0CC2161502E00F1BE1C /* questions.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2BA0CB2161502E00F1BE1C /* questions.png */; };
 		8C2BA0CE2161508A00F1BE1C /* database.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2BA0CD2161508A00F1BE1C /* database.png */; };
+		8C4B9E6E217D678000C0B321 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4B9E6C217D678000C0B321 /* MapaViewController.swift */; };
+		8C4B9E71217D679000C0B321 /* MapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C4B9E70217D679000C0B321 /* MapaViewController.xib */; };
 		8C6328D32160331F00D77118 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6328D12160331F00D77118 /* HomeViewController.swift */; };
 		8C6328D62160336300D77118 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6328D52160336300D77118 /* HomeViewController.xib */; };
+		8C70E2F72175620C00635978 /* infoimg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C70E2F62175620C00635978 /* infoimg.jpg */; };
+		8C75F64E2173FFF600980FE1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C75F64D2173FFF600980FE1 /* ImagePicker.swift */; };
 		8C78B7752165886400964C55 /* DaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C78B7732165886400964C55 /* DaoTableViewController.swift */; };
 		8C78B7782165888900964C55 /* DaoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C78B7772165888900964C55 /* DaoTableViewController.xib */; };
 		8C78B77B21658A7200964C55 /* AlunoDaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C78B77921658A7200964C55 /* AlunoDaoViewController.swift */; };
 		8C78B77E21658ACE00964C55 /* AlunoDaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C78B77D21658ACD00964C55 /* AlunoDaoViewController.xib */; };
 		8C78B781216594CD00964C55 /* DaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C78B77F216594CD00964C55 /* DaoTableViewCell.swift */; };
 		8C78B784216594F400964C55 /* DaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C78B783216594F400964C55 /* DaoTableViewCell.xib */; };
+		8C7B1A0E21769F8D008608AD /* apialuno.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C7B1A0D21769F8D008608AD /* apialuno.jpg */; };
 		8CA837A4216426360077630C /* ApiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CA837A2216426360077630C /* ApiTableViewCell.xib */; };
 		8CA837A8216426DB0077630C /* ApiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA837A7216426DB0077630C /* ApiTableViewCell.swift */; };
 		8CA837AA216429180077630C /* Repositorio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA837A9216429180077630C /* Repositorio.swift */; };
 		8CA837AC216429770077630C /* AlunoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA837AB216429770077630C /* AlunoApi.swift */; };
-		8CB4B9EC216EC5040015750D /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4B9EA216EC5040015750D /* unchecked.png */; };
-		8CB4B9ED216EC5040015750D /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB4B9EB216EC5040015750D /* checked.png */; };
+		8CB71B3621779BDF00430AA9 /* MenuOpcoesAlunos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB71B3521779BDF00430AA9 /* MenuOpcoesAlunos.swift */; };
+		8CB71B382177A02200430AA9 /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB71B372177A02200430AA9 /* Mensagem.swift */; };
 		8CCEDB13216430F7005F56C7 /* AlunoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEDB12216430F7005F56C7 /* AlunoDAO.swift */; };
 		8CD5FDEB21682053000F8DDF /* AlunoApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5FDEA21682052000F8DDF /* AlunoApiModel.swift */; };
 		8CDA09F1216C1CB100127FE0 /* AlunoApiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDA09EF216C1CB100127FE0 /* AlunoApiViewController.swift */; };
@@ -42,35 +49,47 @@
 		8CE23221215EF4B80045CBD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CE23220215EF4B80045CBD3 /* Assets.xcassets */; };
 		8CE23224215EF4B80045CBD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE23222215EF4B80045CBD3 /* LaunchScreen.storyboard */; };
 		8CE2C4E5216ED6BD00538366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE2C4E3216ED6BC00538366 /* Main.storyboard */; };
+		8CF440AB2173CA72002BAC97 /* icons8-info-squared-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF440A62173CA71002BAC97 /* icons8-info-squared-50.png */; };
+		8CF440AC2173CA72002BAC97 /* icons8-web-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF440A72173CA72002BAC97 /* icons8-web-50.png */; };
+		8CF440AD2173CA72002BAC97 /* icons8-cloud-storage-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF440A82173CA72002BAC97 /* icons8-cloud-storage-50.png */; };
+		8CF440AE2173CA72002BAC97 /* icons8-contacts-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF440A92173CA72002BAC97 /* icons8-contacts-50.png */; };
+		8CF440B02173CE35002BAC97 /* icons8-home-50 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF440AF2173CE35002BAC97 /* icons8-home-50 (1).png */; };
 		BAAE9EBC886EC2A32982D65D /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC06B9B4C2D78871E1D050A /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		093D7EB00411BBE4B5CB1C5D /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		877D6DA11D19CEEFCED8DD82 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
+		8C2176D821727188005258B7 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = success.png; path = App/Images/success.png; sourceTree = SOURCE_ROOT; };
+		8C2176DC21727246005258B7 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unchecked.png; path = App/Images/unchecked.png; sourceTree = SOURCE_ROOT; };
+		8C25B3712177F2C100B0FBFA /* Localizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizacao.swift; sourceTree = "<group>"; };
 		8C274A0721617864009169CC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8C2BA0BA2161416000F1BE1C /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		8C2BA0BE2161417F00F1BE1C /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		8C2BA0C1216144CF00F1BE1C /* egsys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = egsys.png; path = App/Images/egsys.png; sourceTree = SOURCE_ROOT; };
-		8C2BA0C3216146AD00F1BE1C /* HomeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDelegate.swift; sourceTree = "<group>"; };
 		8C2BA0C521614B8D00F1BE1C /* startup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startup.png; path = App/Images/startup.png; sourceTree = SOURCE_ROOT; };
 		8C2BA0C721614F7600F1BE1C /* archive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = archive.png; path = App/Images/archive.png; sourceTree = SOURCE_ROOT; };
 		8C2BA0CB2161502E00F1BE1C /* questions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = questions.png; path = App/Images/questions.png; sourceTree = SOURCE_ROOT; };
 		8C2BA0CD2161508A00F1BE1C /* database.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = database.png; path = App/Images/database.png; sourceTree = SOURCE_ROOT; };
+		8C4B9E6C217D678000C0B321 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		8C4B9E70217D679000C0B321 /* MapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapaViewController.xib; sourceTree = "<group>"; };
 		8C6328D12160331F00D77118 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8C6328D52160336300D77118 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		8C70E2F62175620C00635978 /* infoimg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = infoimg.jpg; path = App/Images/infoimg.jpg; sourceTree = SOURCE_ROOT; };
+		8C75F64D2173FFF600980FE1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		8C78B7732165886400964C55 /* DaoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoTableViewController.swift; sourceTree = "<group>"; };
 		8C78B7772165888900964C55 /* DaoTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaoTableViewController.xib; sourceTree = "<group>"; };
 		8C78B77921658A7200964C55 /* AlunoDaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoDaoViewController.swift; sourceTree = "<group>"; };
 		8C78B77D21658ACD00964C55 /* AlunoDaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlunoDaoViewController.xib; sourceTree = "<group>"; };
 		8C78B77F216594CD00964C55 /* DaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaoTableViewCell.swift; sourceTree = "<group>"; };
 		8C78B783216594F400964C55 /* DaoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaoTableViewCell.xib; sourceTree = "<group>"; };
+		8C7B1A0D21769F8D008608AD /* apialuno.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apialuno.jpg; path = App/Images/apialuno.jpg; sourceTree = SOURCE_ROOT; };
 		8CA837A2216426360077630C /* ApiTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApiTableViewCell.xib; sourceTree = "<group>"; };
 		8CA837A7216426DB0077630C /* ApiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiTableViewCell.swift; sourceTree = "<group>"; };
 		8CA837A9216429180077630C /* Repositorio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositorio.swift; sourceTree = "<group>"; };
 		8CA837AB216429770077630C /* AlunoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoApi.swift; sourceTree = "<group>"; };
-		8CB4B9EA216EC5040015750D /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unchecked.png; path = App/Images/unchecked.png; sourceTree = SOURCE_ROOT; };
-		8CB4B9EB216EC5040015750D /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = App/Images/checked.png; sourceTree = SOURCE_ROOT; };
+		8CB71B3521779BDF00430AA9 /* MenuOpcoesAlunos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOpcoesAlunos.swift; sourceTree = "<group>"; };
+		8CB71B372177A02200430AA9 /* Mensagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
 		8CCEDB12216430F7005F56C7 /* AlunoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoDAO.swift; sourceTree = "<group>"; };
 		8CD5FDEA21682052000F8DDF /* AlunoApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoApiModel.swift; sourceTree = "<group>"; };
 		8CDA09EF216C1CB100127FE0 /* AlunoApiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoApiViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +104,11 @@
 		8CE23223215EF4B80045CBD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CE23225215EF4B80045CBD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CE2C4E4216ED6BC00538366 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8CF440A62173CA71002BAC97 /* icons8-info-squared-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-info-squared-50.png"; path = "App/Images/icons8-info-squared-50.png"; sourceTree = SOURCE_ROOT; };
+		8CF440A72173CA72002BAC97 /* icons8-web-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-web-50.png"; path = "App/Images/icons8-web-50.png"; sourceTree = SOURCE_ROOT; };
+		8CF440A82173CA72002BAC97 /* icons8-cloud-storage-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-cloud-storage-50.png"; path = "App/Images/icons8-cloud-storage-50.png"; sourceTree = SOURCE_ROOT; };
+		8CF440A92173CA72002BAC97 /* icons8-contacts-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-contacts-50.png"; path = "App/Images/icons8-contacts-50.png"; sourceTree = SOURCE_ROOT; };
+		8CF440AF2173CE35002BAC97 /* icons8-home-50 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-home-50 (1).png"; path = "App/Images/icons8-home-50 (1).png"; sourceTree = SOURCE_ROOT; };
 		BCC06B9B4C2D78871E1D050A /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +141,10 @@
 				8CA837AB216429770077630C /* AlunoApi.swift */,
 				8CCEDB12216430F7005F56C7 /* AlunoDAO.swift */,
 				8CD5FDEA21682052000F8DDF /* AlunoApiModel.swift */,
+				8C75F64D2173FFF600980FE1 /* ImagePicker.swift */,
+				8CB71B3521779BDF00430AA9 /* MenuOpcoesAlunos.swift */,
+				8CB71B372177A02200430AA9 /* Mensagem.swift */,
+				8C25B3712177F2C100B0FBFA /* Localizacao.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,8 +154,15 @@
 			children = (
 				8C2BA0CB2161502E00F1BE1C /* questions.png */,
 				8C2BA0CD2161508A00F1BE1C /* database.png */,
-				8CB4B9EB216EC5040015750D /* checked.png */,
-				8CB4B9EA216EC5040015750D /* unchecked.png */,
+				8CF440A82173CA72002BAC97 /* icons8-cloud-storage-50.png */,
+				8CF440A92173CA72002BAC97 /* icons8-contacts-50.png */,
+				8C7B1A0D21769F8D008608AD /* apialuno.jpg */,
+				8CF440AF2173CE35002BAC97 /* icons8-home-50 (1).png */,
+				8C70E2F62175620C00635978 /* infoimg.jpg */,
+				8CF440A62173CA71002BAC97 /* icons8-info-squared-50.png */,
+				8CF440A72173CA72002BAC97 /* icons8-web-50.png */,
+				8C2176DC21727246005258B7 /* unchecked.png */,
+				8C2176D821727188005258B7 /* success.png */,
 				8C2BA0C721614F7600F1BE1C /* archive.png */,
 				8C2BA0C521614B8D00F1BE1C /* startup.png */,
 				8C2BA0C1216144CF00F1BE1C /* egsys.png */,
@@ -136,20 +171,13 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
-		8C2DD98C216034BF001AC717 /* Delegates */ = {
-			isa = PBXGroup;
-			children = (
-				8C2BA0C3216146AD00F1BE1C /* HomeDelegate.swift */,
-			);
-			path = Delegates;
-			sourceTree = "<group>";
-		};
 		8C6328CF216032C700D77118 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8C2BA0BE2161417F00F1BE1C /* InfoViewController.xib */,
 				8CDA09F3216C1DD000127FE0 /* AlunoApiViewController.xib */,
 				8C78B7772165888900964C55 /* DaoTableViewController.xib */,
+				8C4B9E70217D679000C0B321 /* MapaViewController.xib */,
 				8C78B783216594F400964C55 /* DaoTableViewCell.xib */,
 				8C78B77D21658ACD00964C55 /* AlunoDaoViewController.xib */,
 				8CE020F221617F91003F3E93 /* ApiTableViewController.xib */,
@@ -168,6 +196,7 @@
 				8C78B7732165886400964C55 /* DaoTableViewController.swift */,
 				8C78B77921658A7200964C55 /* AlunoDaoViewController.swift */,
 				8CDA09EF216C1CB100127FE0 /* AlunoApiViewController.swift */,
+				8C4B9E6C217D678000C0B321 /* MapaViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -204,7 +233,6 @@
 			children = (
 				8C274A0621617859009169CC /* Models */,
 				8C2BA0C0216144BF00F1BE1C /* Images */,
-				8C2DD98C216034BF001AC717 /* Delegates */,
 				8C6328D02160330D00D77118 /* Controllers */,
 				8C6328CF216032C700D77118 /* Views */,
 				8CE23216215EF4B70045CBD3 /* AppDelegate.swift */,
@@ -288,22 +316,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C2BA0C821614F7600F1BE1C /* archive.png in Resources */,
+				8CF440AE2173CA72002BAC97 /* icons8-contacts-50.png in Resources */,
 				8C2BA0CC2161502E00F1BE1C /* questions.png in Resources */,
 				8CA837A4216426360077630C /* ApiTableViewCell.xib in Resources */,
 				8CDA09F4216C1DD000127FE0 /* AlunoApiViewController.xib in Resources */,
+				8C7B1A0E21769F8D008608AD /* apialuno.jpg in Resources */,
 				8C2BA0CE2161508A00F1BE1C /* database.png in Resources */,
 				8CE23224215EF4B80045CBD3 /* LaunchScreen.storyboard in Resources */,
+				8CF440B02173CE35002BAC97 /* icons8-home-50 (1).png in Resources */,
 				8CE23221215EF4B80045CBD3 /* Assets.xcassets in Resources */,
-				8CB4B9EC216EC5040015750D /* unchecked.png in Resources */,
+				8CF440AC2173CA72002BAC97 /* icons8-web-50.png in Resources */,
+				8C2176D921727188005258B7 /* success.png in Resources */,
+				8C70E2F72175620C00635978 /* infoimg.jpg in Resources */,
 				8C2BA0C621614B8D00F1BE1C /* startup.png in Resources */,
 				8C78B7782165888900964C55 /* DaoTableViewController.xib in Resources */,
 				8CE020F321617F91003F3E93 /* ApiTableViewController.xib in Resources */,
+				8CF440AD2173CA72002BAC97 /* icons8-cloud-storage-50.png in Resources */,
 				8C78B77E21658ACE00964C55 /* AlunoDaoViewController.xib in Resources */,
 				8C78B784216594F400964C55 /* DaoTableViewCell.xib in Resources */,
 				8C2BA0BF2161417F00F1BE1C /* InfoViewController.xib in Resources */,
-				8CB4B9ED216EC5040015750D /* checked.png in Resources */,
 				8CE2C4E5216ED6BD00538366 /* Main.storyboard in Resources */,
 				8C6328D62160336300D77118 /* HomeViewController.xib in Resources */,
+				8C4B9E71217D679000C0B321 /* MapaViewController.xib in Resources */,
+				8C2176DD21727246005258B7 /* unchecked.png in Resources */,
+				8CF440AB2173CA72002BAC97 /* icons8-info-squared-50.png in Resources */,
 				8C2BA0C2216144CF00F1BE1C /* egsys.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,15 +401,19 @@
 				8C78B7752165886400964C55 /* DaoTableViewController.swift in Sources */,
 				8CCEDB13216430F7005F56C7 /* AlunoDAO.swift in Sources */,
 				8CE020F021617F6D003F3E93 /* ApiTableViewController.swift in Sources */,
+				8C75F64E2173FFF600980FE1 /* ImagePicker.swift in Sources */,
+				8CB71B3621779BDF00430AA9 /* MenuOpcoesAlunos.swift in Sources */,
 				8C78B77B21658A7200964C55 /* AlunoDaoViewController.swift in Sources */,
 				8CE23219215EF4B70045CBD3 /* ViewController.swift in Sources */,
 				8CE2321F215EF4B70045CBD3 /* App.xcdatamodeld in Sources */,
+				8C25B3722177F2C100B0FBFA /* Localizacao.swift in Sources */,
 				8CE23217215EF4B70045CBD3 /* AppDelegate.swift in Sources */,
 				8C6328D32160331F00D77118 /* HomeViewController.swift in Sources */,
+				8C4B9E6E217D678000C0B321 /* MapaViewController.swift in Sources */,
+				8CB71B382177A02200430AA9 /* Mensagem.swift in Sources */,
 				8CD5FDEB21682053000F8DDF /* AlunoApiModel.swift in Sources */,
 				8C2BA0BC2161416000F1BE1C /* InfoViewController.swift in Sources */,
 				8CDA09F1216C1CB100127FE0 /* AlunoApiViewController.swift in Sources */,
-				8C2BA0C4216146AD00F1BE1C /* HomeDelegate.swift in Sources */,
 				8CA837AA216429180077630C /* Repositorio.swift in Sources */,
 				8C78B781216594CD00964C55 /* DaoTableViewCell.swift in Sources */,
 				8CA837A8216426DB0077630C /* ApiTableViewCell.swift in Sources */,
